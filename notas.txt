@@ -1,0 +1,14 @@
+    1  pip install flask python-dotenv pyngrok
+    2  pip freeze
+    3  pip freeze > requirements.txt
+    4  python3 app.py
+    5  historia
+    6  historial
+    7  history
+    8  history > notas.txt
+
+
+git add .
+git commit -m "mensagem"
+fit push
+git push
