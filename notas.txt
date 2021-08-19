@@ -10,5 +10,4 @@
 
 git add .
 git commit -m "mensagem"
-fit push
 git push

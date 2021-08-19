@@ -8,6 +8,11 @@ DATABASE = "blog.db"
 SECRET_KEY = 'pudim'
 
 app = Flask(__name__)
+app.config.from_object(__name__)
+
+def conectar_bd():
+    return sqlite3.connect(app.config['DATABASE'])
+
 
 @app.route('/hello')
 def pagina_inicial():
