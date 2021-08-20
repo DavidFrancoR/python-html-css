@@ -13,6 +13,19 @@ app.config.from_object(__name__)
 def conectar_bd():
     return sqlite3.connect(app.config['DATABASE'])
 
+@app.before_request
+def antes_requisicao():
+    g.bd = conectar_bd()
+
+@app.teardown_request
+def depois_request(exc):
+    g.bd.close()
+
+@app.route('/')
+@app.route('/entradas')
+def exit_entradas():
+#    return "<h1 style ='color: red;'> Aqui estarão as postagens!!</h1>"
+     return render_template('exibir_entradas.html')
 
 @app.route('/hello')
 def pagina_inicial():
