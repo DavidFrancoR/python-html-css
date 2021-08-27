@@ -7,6 +7,9 @@
     7  history
     8  history > notas.txt
 
+pip install requirements.txt
+flask run
+
 
 git add .
 git commit -m "mensagem"
